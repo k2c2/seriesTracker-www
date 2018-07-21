@@ -1,5 +1,22 @@
-<div class="container">
-  <app-series-card></app-series-card>
-  <app-series-card></app-series-card>
-  <app-series-card></app-series-card>
+<div class="container pt-2">
+  <div class="card" style="width: 18rem;" *ngFor="let series of seriesList">
+    <div class="card-body">
+      <h5 class="card-title mb-0">{{series.title}}</h5>
+    </div>
+    <div class="card-body">
+      <a class="btn btn-primary" href="{{series.url}}" role="button">
+        Watch me <i class="fa fa-external-link-alt"></i>
+      </a>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <label for="{{series._id}}_season" class="col-4 pr-0">Season:</label>
+        <input type="number" class="form-control col-4" id="{{series._id}}_season" [(ngModel)]="series.season" (change)="debugMe($event)">
+      </li>
+      <li class="list-group-item">
+        <label for="{{series._id}}_episode" class="col-4 pr-0">Episode:</label>
+        <input type="number" class="form-control col-4" id="{{series._id}}_episode" [(ngModel)]="series.episode">
+      </li>
+    </ul>
+  </div>
 </div>
