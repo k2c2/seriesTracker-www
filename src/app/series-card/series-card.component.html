@@ -1,9 +1,22 @@
 <div class="card-container col-4">
   <div class="col-12">
-   <h2 class="card-title">{{title}}</h2>
-   <div class="card-progress">
-     <span class="card-season">Season {{season}}</span>
-     <span class="card-episode">Episode {{episode}}</span>
+   <h3 class="card-title">{{title}}</h3>
+   <a href="#">Link to watch</a>
+   <div class="card-progress row">
+     <div class="card-season col-6">
+       <span>Season {{season}}</span>
+       <div class="buttons-container">
+         <div><span>+</span></div>
+         <div><span>-</span></div>
+       </div>
+     </div>
+     <div class="card-episode col-6">
+       <span>Episode {{episode}}</span>
+       <div class="buttons-container">
+         <div><span>+</span></div>
+         <div><span>-</span></div>
+       </div>
+     </div>
    </div>
   </div>
 </div>
